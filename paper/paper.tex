@@ -6,7 +6,7 @@
 \documentclass{article} %a classe do documento é um artigo
 
 \usepackage[brazil]{babel}
-
+\usepackage{graphicx}
 
 
 
@@ -61,5 +61,43 @@ e $b$ é o coeficiente linear.
 
 Utilizamos a equação \ref{eq:reta} em um código Python para fazer 
 o ajuste da reta com o método dos mínimos quadrados. Isso está referenciado na seção \ref{sec:metodos}
+
+\section{Resultados}
+\label{sec:resultados}
+
+Analisamos os dados de 225 países.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\columnwidth]{../figuras/variacao_temperatura.png}
+	\caption{
+		Variação de temperatura média mensal dos cinco últimos anos.
+		a) Países com as cinco menores variações de temperatura.
+		b) Países com as cinco maiores variações de temperatura.
+	}
+\label{fig:variacao}
+\end{figure}
+
+
+Os resultados da análise de variação de temperatura estão na figura \ref{fig:variacao}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
