@@ -9,9 +9,12 @@
 \usepackage{graphicx}
 \usepackage[round,authoryear,sort]{natbib} %formatacao de referencias
 %parentesis, autorano, arruma por ordem alfabetica
+\usepackage{notomath}
 
 
+\newcommand{\Title}{Análise de variação de temperatura dos últimos cinco anos}
 
+\input{paises.tex}
 
 
 %Corpo
@@ -20,7 +23,7 @@
 % ambiente: está entre o begin e o end
 \begin{document}
 
-\title{Análise de variação de temperatura dos últimos cinco anos}
+\title{\Title}
 \author{Mariana Monteiro e Silva}
 \maketitle
 
@@ -72,6 +75,7 @@ o ajuste da reta com o método dos mínimos quadrados. Isso está referenciado n
 \label{sec:resultados}
 
 Analisamos os dados de 225 países.
+Os países analisados foram: \Paises
 
 \begin{figure}
 	\centering
