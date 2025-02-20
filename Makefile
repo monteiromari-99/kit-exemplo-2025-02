@@ -3,11 +3,15 @@
 # alvo: pre-requisito1 pre-requisito2...
 #	comandos que usam os pre-requisitos para gerar o alvo
 
-all: resultados/variacao_temperatura.csv resultados/numero_de_dados.txt resultados/variacao_temperatura.csv figuras/variacao_temperatura.png
+all: paper/paper.pdf  resultados/numero_de_dados.txt resultados/variacao_temperatura.csv 
 	#nenhum comando, o "all" é um alvo ficticio
+# resultados/variacao_temperatura.csv figuras/variacao_temperatura.png esses pre requisitos nao sao mais necessarios uma vez que temos o paper
 
 clean:
-	rm -r -f resultados dados figuras
+	rm -r -f resultados dados figuras paper/paper.pdf
+	
+paper/paper.pdf: paper/paper.tex figuras/variacao_temperatura.png
+	tectonic -X compile paper/paper.tex
 
 resultados/numero_de_dados.txt: dados/temperature-data.zip
 	mkdir -p resultados
